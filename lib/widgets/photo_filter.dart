@@ -54,7 +54,6 @@ class PhotoFilter extends StatelessWidget {
 ///The PhotoFilterSelector Widget for apply filter from a selected set of filters
 class PhotoFilterSelector extends StatefulWidget {
   final Widget title;
-  final Color appBarColor;
   final List<Filter> filters;
   final imageLib.Image image;
   final Widget loader;
@@ -67,7 +66,6 @@ class PhotoFilterSelector extends StatefulWidget {
     @required this.title,
     @required this.filters,
     @required this.image,
-    this.appBarColor = Colors.blue,
     this.loader = const Center(child: CircularProgressIndicator()),
     this.fit = BoxFit.fill,
     @required this.filename,
@@ -105,7 +103,6 @@ class _PhotoFilterSelectorState extends State<PhotoFilterSelector> {
       child: Scaffold(
         appBar: AppBar(
           title: widget.title,
-          backgroundColor: widget.appBarColor,
           actions: <Widget>[
             loading
                 ? Container()
